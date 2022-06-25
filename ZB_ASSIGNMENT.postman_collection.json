@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "b4c3cd71-2d2b-4018-a8c8-afe59350b964",
+		"name": "ZB_ASSIGNMENT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SIGNUP API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tanmay6anand@gmail.com\",\r\n    \"password\":\"tanmay\",\r\n    \"name\":\"Tanmay Anand\",\r\n    \"age\":21\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tanmay6anand@gmail.com\",\r\n    \"password\":\"tanmay\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD MOVIE API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbmF5NmFuYW5kQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYyNzZiN2JmYzVjZTM1NmFkNzhjNzY0MSIsInNjb3BlIjoidXNlciIsImlhdCI6MTY1MTk0NzQ3MiwiZXhwIjoxNjUxOTUxMDcyfQ.RWJMsR90d-xfpfgUf7v9iMnV8JDlGa4A5ixgO3CO_MA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\":\"Eternals\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/addmovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addmovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND MOVIE API",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbm1heTZhbmFuZEBnbWFpbC5jb20iLCJ1c2VySWQiOiI2Mjc3OTQwMTk2MzU0MjRhMDljOGZlNWEiLCJzY29wZSI6InVzZXIiLCJpYXQiOjE2NTIwMDM4NTIsImV4cCI6MTY1MjAwNzQ1Mn0.4Y0r1O122XXqN1gp8zJEzMTF8ifOik9w4zVKWCPi3Gg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:5000/findmovie/e",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"findmovie",
+						"e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD RATING API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbmF5NmFuYW5kQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYyNzZiN2JmYzVjZTM1NmFkNzhjNzY0MSIsInNjb3BlIjoidXNlciIsImlhdCI6MTY1MTk0NzQ3MiwiZXhwIjoxNjUxOTUxMDcyfQ.RWJMsR90d-xfpfgUf7v9iMnV8JDlGa4A5ixgO3CO_MA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie\":\"Eternals\",\r\n    \"rating\":5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/addrating",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addrating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD FAVOURITE MOVIE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbm1heTZhbmFuZEBnbWFpbC5jb20iLCJ1c2VySWQiOiI2Mjc3OTY2MTRjYTY4YTRiZmNlNmI1YmIiLCJzY29wZSI6InVzZXIiLCJpYXQiOjE2NTIwMDQ0NTMsImV4cCI6MTY1MjAwODA1M30.N0DyHEIlDyJDOwlpHysEMOXcytxlgRBc3MEAOhJEBSQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"tanmay6anand@gmail.com\",\r\n    \"moviesID\": [\"627798cd126cc650450d9273\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/addfavmovie",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"addfavmovie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

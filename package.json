@@ -1,0 +1,32 @@
+{
+  "name": "zerobalance",
+  "version": "1.0.0",
+  "description": "Assignment for internship",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node app",
+    "prettier": "npx prettier --write .",
+    "dev": "nodemon app",
+    "lint": "eslint"
+  },
+  "author": "Tanmay Anand",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.2",
+    "nodemailer": "^6.6.3"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "prettier": "^2.6.2"
+  }
+}
